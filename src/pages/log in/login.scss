@@ -1,0 +1,60 @@
+
+// .login{
+//   padding: 7%;
+//   .login-wrapper {
+//     // padding: 50px;
+
+  
+//     display: grid;
+//     grid-template-columns: 0.6fr 0.4fr;
+//     place-items: center;
+//     .inputs-wrapper{
+//       display: flex;
+//       flex-direction: column;
+     
+//       h3{
+//           font-size: 24px;
+//           font-weight: 600;
+//           margin: 10px 0px ;
+          
+//       }
+//       a{
+//           text-decoration: none;
+//           margin-bottom: 10px;
+//         }
+//         .submit-btn{
+//           align-self: flex-start;
+//           margin-bottom: 1rem;
+//           padding: 10px 16px;
+//         }
+//     }
+//     .image-wrapper{
+//       position: relative;
+//       display: inline-block;
+      
+//       img{
+//           width: 100%;
+//           object-fit: cover;
+//       }
+//       .image-layer{
+//           position: absolute;
+//           top: 0;
+//           left: 0;
+//           right: 0;
+//           bottom: 0;
+//           background-image: linear-gradient(to right, purple, blue);
+//           opacity: 0.6;
+//       }
+//     }
+//   }
+
+// }
+
+
+
+.login{
+  background: blue;
+  .login-wrapper{
+    background: plum;
+  }
+}

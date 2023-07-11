@@ -1,0 +1,49 @@
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    input,
+    label {
+      display: block;
+    }
+    input {
+      flex: 3;
+      font: inherit;
+      padding: 10px 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      border: none;
+      background: #eff1fd;
+      &:focus {
+        outline: none;
+        border-color: #b1b0bf;
+        background: #c7cfff;
+      }
+      &.invalid {
+        background-color: #ffcccc; /* set background color to red */
+      }
+    }
+    .show-btn {
+      cursor: pointer;
+      position: absolute;
+      background-color: transparent;
+      color: #979797;
+      border: 0;
+      right: 15px;
+      top: 12px;
+    }
+  }
+  
+  /* update error message styles */
+  .error-message {
+    margin-bottom: 5px;
+    padding-top: 5px;
+    .invalid {
+      visibility: hidden;
+      color: crimson;
+    }
+    .show {
+      visibility: visible;
+    }
+  }
