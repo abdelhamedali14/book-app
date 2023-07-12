@@ -1,0 +1,22 @@
+.buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  .actions-button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    .eye-icon {
+      color: blue;
+    }
+
+    .pencil-icon {
+      color: green;
+    }
+
+    .trash-icon {
+      color: red;
+    }
+  }
+}

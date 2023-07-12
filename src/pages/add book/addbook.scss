@@ -1,0 +1,51 @@
+.addBook-container {
+  padding: 1rem;
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  .main-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  .common-inputs-wrapper {
+    width: 50% !important;
+  }
+
+  .diffrent-input-wrapper {
+    width: 45%;
+  }
+  .button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  .cover-photo-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .cover-photo {
+      width: 30%;
+      height: 250px;
+      margin-bottom: 1rem;
+    }
+    span{
+      padding: 0.5rem 0rem ;
+      color: #5d5d5d;
+    }
+    .upload-btn {
+      cursor: pointer;
+      background-color: white;
+      border: 1px solid purple;
+      color: purple;
+      padding: 0.9rem 1.5rem;
+      border-radius: 5px;
+      margin: 1rem 0rem ;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.bookList-wrapper {
+  h2 {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .searhBar-and-add-new-book {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .search-bar {
+      width: 30%;
+    }
+    .add-new-book {
+      margin-bottom: 2rem;
+    }
+  }
+  .table {
+    .p-datatable.datatable {
+      width: 100% !important;
+    }
+    .p-datatable.datatable i {
+      font-size: 1.25rem;
+    }
+    .p-datatable .p-paginator-bottom {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
