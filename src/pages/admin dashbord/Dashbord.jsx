@@ -16,7 +16,6 @@ export default function Dashbord() {
   return (
     <>
       <ConfirmDialog />
-
       <div className="dashbord-wrapper">
         <div className="sideBar">
           <SideBar />
@@ -30,11 +29,11 @@ export default function Dashbord() {
                 <Route path="/books-list" element={<BookList />} />
                 <Route
                   path="/add-book"
-                  element={<AddBook editMode={false} />}
+                  element={<AddBook edit={false} />}
                 />
                 <Route
                   path="/edit-book/:id"
-                  element={<AddBook editMode={true} />}
+                  element={<AddBook edit={true} />}
                 />
                 <Route path="/book-details/:id" element={<BookDetails />} />
               </Routes>

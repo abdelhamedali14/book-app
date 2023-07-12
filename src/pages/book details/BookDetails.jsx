@@ -4,9 +4,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import { confirmDialog } from "primereact/confirmdialog";
  import  {Card}   from "../../components/UI/card/Card"
  import  Button  from "../../components/UI/button/Button"
-
  import "./bookdetails.scss"
-
  import photo  from "../../assets/images/dead.jpg"
 
 export default function BookDetails() {

@@ -1,5 +1,4 @@
 import "./header.scss";
-import { Card } from "../../components/UI/card/Card";
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../Contexts/AuthContext";
 export default function Header() {

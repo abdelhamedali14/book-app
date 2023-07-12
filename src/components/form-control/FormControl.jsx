@@ -2,7 +2,6 @@ import { DatePicker } from "./inputs-field/DatePicker";
 import { Input } from "./inputs-field/Input";
 import { Select } from "./inputs-field/Select";
 import {TextArea} from "./inputs-field/TextArea"
-// import {FileUpload} from "./inputs-field/FileUpload"
 
 
 export const FormControl = ( props ) => {
@@ -13,9 +12,6 @@ export const FormControl = ( props ) => {
         case "option": return <Select {...rest}/>
         case "date": return <DatePicker {...rest}/> 
         case "textArea": return <TextArea {...rest}/> 
-        // case "file":
-        //     return <FileUpload {...rest} />;
-
         default: return null
     }
   
