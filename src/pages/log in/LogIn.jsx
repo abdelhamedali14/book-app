@@ -5,9 +5,13 @@ import booksShlf from "../../assets/images/books2.jpg";
 import appLogo from "../../assets/images/logo.png";
 import { Card } from "../../components/UI/card/Card";
 import Button from "../../components/UI/button/Button";
+import { useContext } from "react";
+import { AuthContext } from "../../Contexts/AuthContext";
 import "./login.scss";
 
 export function LogIn() {
+
+  const Auth =useContext(AuthContext)
   const initialValues = {
     email: "",
     password: "",
@@ -20,7 +24,8 @@ export function LogIn() {
   });
 
   function onSubmit(values) {
-    console.log(values);
+
+    Auth.onLogin(initialValues.email,initialValues.password)
   }
 
   return (

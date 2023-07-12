@@ -12,10 +12,9 @@ export default function ButtonsGroup(props) {
   console.log( id);
   confirmDialog({
     id: props.rowData.id,
-    message: "Do you want to delete this record?",
-    header: "Delete Confirmation",
-    icon: "pi pi-info-circle",
-    acceptClassName: "p-button-danger",
+    message: "Are you sure you want to delete the book",
+    header: "Delete Book",
+    acceptClassName: "p-button-danger ",
     accept: () => deleteBookHandler(id),
   });
   console.log(id);

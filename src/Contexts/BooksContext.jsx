@@ -15,7 +15,7 @@ export const BooksControllerProvider = ({ children }) => {
   };
 
   const deleteBookHandler = (bookId) => {
-    setTableBooks((prev) => prev.filter((book) => book.id !== bookId));
+    setTableBooks((prev) => prev.filter((book) =>book && book.id !== bookId));
   };
 
   const getBookByIdHandler = (bookId) => {

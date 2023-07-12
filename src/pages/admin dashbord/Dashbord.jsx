@@ -11,15 +11,11 @@ import {
   Navigate,
 } from "react-router-dom";
 import AddBook from "../add book/AddBook";
-import  EditBook from "../../components/edit book/EditBook"
-
 import BookDetails from "../book details/BookDetails";
-
 export default function Dashbord() {
-
   return (
     <>
-          <ConfirmDialog />
+      <ConfirmDialog />
 
       <div className="dashbord-wrapper">
         <div className="sideBar">
@@ -38,19 +34,9 @@ export default function Dashbord() {
                 />
                 <Route
                   path="/edit-book/:id"
-                  element={
-                    <EditBook
-                      editMode={true}
-                    />
-                  }
+                  element={<AddBook editMode={true} />}
                 />
-                <Route
-                  path="/book-details/:id"
-                  element={
-                    <BookDetails
-                    />
-                  }
-                />
+                <Route path="/book-details/:id" element={<BookDetails />} />
               </Routes>
             </Router>
           </div>

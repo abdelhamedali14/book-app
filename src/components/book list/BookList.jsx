@@ -16,9 +16,10 @@ export const BookList = () => {
   useEffect(() => {
 
     const filtered = tableBooks.filter(
+   
       (book) =>
-        book.title.toLowerCase().includes(searchInput.toLowerCase()) ||
-        book.author.toLowerCase().includes(searchInput.toLowerCase())
+        book.title?.toLowerCase().includes(searchInput?.toLowerCase() ?? '') ||
+        book.author?.toLowerCase().includes(searchInput?.toLowerCase() ?? '')
     );
     setFilter(filtered);
   }, [searchInput, tableBooks]);
@@ -62,7 +63,7 @@ export const BookList = () => {
           <Link to={"/add-book"}>
           <Button>
               <span> + </span> add Book
-            </Button>        </Link>
+            </Button>  </Link>
          
           </div>
         </div>

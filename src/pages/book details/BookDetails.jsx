@@ -14,11 +14,10 @@ export default function BookDetails() {
   const { id } = useParams();
 
   const [bookDetails] = getBookByIdHandler(id);
-  console.log(bookDetails);
   const navigate = useNavigate();
 
   const accept = () => {
-    editBookHandler(id);
+    editBookHandler(id && id);
     navigate("/books-list");
   };
   const reject = () => {};
@@ -26,9 +25,8 @@ export default function BookDetails() {
   const deleteConfirm = () => {
     confirmDialog({
       id: Math.random(),
-      message: "Do you want to delete this record?",
-      header: "Delete Confirmation",
-      icon: "pi pi-info-circle",
+      message: "Are you sure you want to delete the book",
+      header: "Delete Book",
       acceptclassNameName: "p-button-danger",
       accept,
       reject,

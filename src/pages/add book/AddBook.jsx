@@ -3,17 +3,17 @@ import { useContext, useRef, useState } from "react";
 import { BooksContext } from "../../Contexts/BooksContext";
 import { Formik, Form } from "formik";
 import Button from "../../components/UI/button/Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import * as Yup from "yup";
 
 import { FormControl } from "../../components/form-control/FormControl";
 
 import "./addbook.scss";
-export default function AddBook() {
+export default function AddBook(props) {
   const fileRef = useRef(null);
   const [isSaved, setIsSaved] = useState(false);
 
-  const { addNewBookHandler } = useContext(BooksContext);
+  const {   getBookByIdHandler,  addNewBookHandler } = useContext(BooksContext);
 
   const categoriesOption = [
     { key: "Select an category", value: "" },
@@ -83,19 +83,55 @@ export default function AddBook() {
       name: "releaseDate",
     },
   ];
-  const initialValues = {
-    bookTitle: "",
-    bookAuthor: "",
-    categories: "",
-    price: "",
-    version: "",
-    bookOlderVersion: "",
-    bookEdition: "",
-    bookisbn: "",
-    releaseDate: new Date(),
-    brief: "",
-    files: "",
-  };
+
+
+  const { id } = useParams();
+  const navigate = useNavigate();
+  
+  // const initialValues = {
+  //   bookTitle: "",
+  //   bookAuthor: "",
+  //   categories: "",
+  //   price: "",
+  //   version: "",
+  //   bookOlderVersion: "",
+  //   bookEdition: "",
+  //   bookisbn: "",
+  //   releaseDate: new Date(),
+  //   brief: "",
+  //   files: "",
+  // };
+  let initialValues;
+  let bookData
+  if (props.editMode) {
+    bookData = getBookByIdHandler(id)[0];
+    initialValues = {
+      title: bookData.title,
+      author: bookData.author,
+      price: +bookData.price,
+      version: bookData.version,
+      edition: bookData.edition,
+      isbn: bookData.isbn,
+      releaseDate: parseDate(bookData.releaseDate),
+      brief: bookData.brief,
+      olderVersion: bookData.olderVersion,
+      category: bookData.category,
+    };
+  } else {
+    initialValues = {
+      title: "",
+      author: "",
+      price: "",
+      version: "",
+      edition: "",
+      isbn: "",
+      releaseDate: "",
+      brief: "",
+      olderVersion: "",
+      category: "",
+    };
+  }
+
   const validationSchema = Yup.object({
     bookTitle: Yup.string().required(" Title is Required"),
     bookAuthor: Yup.string().required("Author is Required"),
@@ -128,6 +164,15 @@ export default function AddBook() {
       setIsSaved(true);
     }
   }
+    //function convert formatted date to object date
+    function parseDate(dateString) {
+      const parts = dateString.split("-");
+      const day = parseInt(parts[1], 10);
+      const month = parseInt(parts[0], 10) - 1;
+      const year = parseInt(parts[2], 10);
+  
+      return new Date(year, month, day);
+    }
 
   return (
     <div className="addBook-container ">

@@ -1,10 +1,13 @@
 import "./header.scss";
 import { Card } from "../../components/UI/card/Card";
 import React, { useContext, useState } from "react";
-
+import { AuthContext } from "../../Contexts/AuthContext";
 export default function Header() {
   const [dropDownVisibility, setDropdownVisibility] = useState(false);
-  const logOutHandler = () => {}
+  const Auth = useContext(AuthContext)
+  const logOutHandler = () => {
+    Auth.onLogout()
+  }
   const toggleDropdown = () => {
     setDropdownVisibility((prev) => {
       return !prev;
