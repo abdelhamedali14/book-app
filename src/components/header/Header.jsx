@@ -1,6 +1,7 @@
 import "./header.scss";
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../Contexts/AuthContext";
+
 export default function Header() {
   const [dropDownVisibility, setDropdownVisibility] = useState(false);
   const Auth = useContext(AuthContext)

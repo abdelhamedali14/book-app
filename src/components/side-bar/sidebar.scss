@@ -9,13 +9,14 @@
   .logo {
     padding: 0.3rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 1.25rem;
     align-items: center;
-    width: 7rem;
-    height: 7rem;
+    width: 100%;
+    height: 8rem;
+  
     img {
-      width: 100%;
+      width: 50%;
     }
   }
   .books {
@@ -27,5 +28,9 @@
     padding-left: 0.7rem;
     border-right: 4px solid purple;
     background-color: #eff1fd;
+    h4{
+      margin-left: 2rem;
+
+    }
   }
 }

@@ -170,8 +170,8 @@ export default function AddBook(props) {
     const year = parseInt(parts[2], 10);
     return new Date(year, month, day);
   }
-//the inputs fields renderd dynamic by passing the array inputs and 
-// the form container component check which type is of input is nedeed and render it 
+  //the inputs fields renderd dynamic by passing the array inputs and
+  // the form container component check which type is of input is nedeed and render it
   return (
     <div className="addBook-container ">
       <h2>Add Book</h2>
@@ -194,8 +194,16 @@ export default function AddBook(props) {
                   <div className="cover-photo card"></div>
 
                   <span>Best Diemensions for book cover image is 128*200</span>
-
-                  <button className="upload-btn">Upload Book Cover</button>
+                  <label htmlFor="file-input">
+                    <input
+                      id="file-input"
+                      className="file-input"
+                      accept="image/*"
+                      type="file"
+                      // onChange={imageInputChangeHandler}
+                    />
+                    Upload Book Cover
+                  </label>
 
                   <span>imageName.png</span>
                 </div>

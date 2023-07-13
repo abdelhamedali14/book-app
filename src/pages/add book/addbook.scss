@@ -29,6 +29,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
     .cover-photo {
       width: 30%;
       height: 250px;
@@ -36,6 +37,7 @@
     }
     span{
       padding: 0.5rem 0rem ;
+      margin-bottom: 1rem;
       color: #5d5d5d;
     }
     .upload-btn {
@@ -46,9 +48,34 @@
       padding: 0.9rem 1.5rem;
       border-radius: 5px;
       margin: 1rem 0rem ;
+      /* Add styles to make the label look like a button */
+      display: inline-block;
+      padding: 0.9rem 1.5rem;
+      border-radius: 5px;
+      background-color: white;
+      border: 1px solid purple;
+      color: purple;
+      cursor: pointer;
     }
+    /* Hide the file input */
     input[type="file"]{
-      display: block !important;
+      display: none;
+    }
+    /* Style the label to position it over the button and match its styles */
+    label {
+      position: absolute;
+      top: 83%;
+      left: 30%;
+      width: 40%;
+      height: 60px;
+      padding: 0.9rem 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+      background-color: white;
+      border: 1px solid purple;
+      color: purple;
+      cursor: pointer;
+      margin-bottom: 1rem;
     }
   }
 }
