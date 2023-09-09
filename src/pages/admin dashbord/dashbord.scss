@@ -1,0 +1,16 @@
+
+.dashbord-wrapper{
+  display: flex;
+  background-color: #eff1fd;
+
+
+  .sideBar{
+    width: 15%;
+  }
+  .header{
+    width: 85%;
+    .app{
+      padding: 1rem;
+    }
+  }
+}
