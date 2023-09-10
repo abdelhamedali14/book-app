@@ -24,9 +24,10 @@ export function LogIn() {
   });
 
   function onSubmit(values) {
+
     Auth.onLogin(initialValues.email,initialValues.password)
-    console.log(values);
   }
+
   return (
     <div className="login-container">
       <Card className="login-wrapper">

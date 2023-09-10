@@ -18,7 +18,7 @@ export default function BookDetails() {
     editBookHandler(id && id);
     navigate("/books-list");
   };
-  // const reject = () => {};
+  const reject = () => {};
 
   const deleteConfirm = () => {
     confirmDialog({
@@ -27,7 +27,7 @@ export default function BookDetails() {
       header: "Delete Book",
       acceptclassNameName: "p-button-danger",
       accept,
-      // reject,
+      reject,
     });
   };
 

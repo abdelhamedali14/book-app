@@ -1,7 +1,6 @@
 {
   "name": "Book App",
   "version": "0.1.0",
-  "homepage": "https://abdelhamedali14.github.io/book-app",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -27,9 +26,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -50,7 +47,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.0.0",
     "source-map-loader": "^4.0.1"
   }
 }
